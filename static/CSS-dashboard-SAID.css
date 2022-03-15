@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Raleway:wght@300&family=Roboto:wght@100&display=swap');
+body {
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns:200px 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas:
+      "sidenav header"
+      "sidenav main"
+      "sidenav footer";
+    height: 100vh;  
+}
+
+.sidenav {
+    grid-area: sidenav;
+    background-color: #8c0303;
+    text-align: center;
+    
+}
+
+.header {
+    grid-area: header;
+    background-color: #590202;
+}
+
+
+.footer {
+    grid-area: footer;
+    background-color: #590202;
+    position:relative;
+    z-index:1; /*mettre le footer en avant pour ne pas etre recouvert par le menu qui est en position fixed*/
+}
+
+.main {
+  padding:20px;
+  grid-area: main;
+  background-color: #f8f8f8;
+  position:relative;
+  display: grid;
+  grid-template-rows:350px 1fr 1fr;
+}
+
+.main_Spe {
+    padding:20px;
+    grid-area: main;
+    background-color: #f8f8f8;
+    position:relative;
+    display: grid;
+    grid-template-rows: 510px 1fr;
+    
+  }
+  
+
+
+/*----------------------------------------------------------ASIDE-------------------------------------------------------------*/
+#PRAVANlogo{
+    text-align: center;
+    width: 120px;
+    height: 150px;
+}
+
+#menu{
+	text-align: left;
+    border-left:10px solid #590202;
+	background-color:#8c0303;
+    margin-top: 35px;
+    width: 100%;
+    position: fixed;
+   
+}
+
+#menu div{
+    background-color:#8c0303;
+    width: 100%;
+    padding: 15px;
+    transition-duration: 0.3s;
+    
+	
+}
+
+/*lorsqu'on passe la souris sur le bouton*/
+#menu div:hover{
+    background-color: #590202;
+    cursor: pointer;
+    
+}
+
+
+#spe{
+    text-decoration: none;
+    color: #f8f8f8;
+	font-size:13px;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/*----------------------------------------------------------HEADER-------------------------------------------------------------*/
+header{
+    text-align: right;
+}
+#actualiser{
+    background-color: #590202;
+    border-width: 0;
+    cursor: pointer;
+    border-radius: 15%;
+    color: #f8f8f8;
+	font-size:15px;
+    font-family: 'Raleway', sans-serif;
+    padding: 10px;
+    margin-top: 5px;
+    margin-right: 10px;
+    transition-duration: 0.3s;
+}
+
+#actualiser:hover{
+    background-color: #590202;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/*----------------------------------------------------------MAIN-------------------------------------------------------------*/
+hr{
+    height: 1px;
+    background-color: #f1eded;
+    opacity: .5;
+    width: 100%;
+
+}
+
+.partie{
+    width: 98%;
+    border-radius: 5px;
+    padding: 10px;
+    background-color:white;
+    box-shadow:4px 5px 8px 3px rgba(64,64,64,0.25);
+    margin-bottom: 30px;
+    text-align: center;
+    color: #8c827b;
+    
+}
+/*******************************************GENERAL***********************************/
+
+
+.donneesGeneralesNbr, .donneesGeneralesGraph{
+    display: flex;
+    justify-content: center;
+}
+
+.nbrTotal{
+    border-radius: 5px;
+    padding: 10px;
+    background-color:#424b35;
+    margin: 10px;
+    width: 30%;
+}
+
+.nbrFilles{
+    border-radius: 5px;
+    padding: 10px;
+    background-color:#9f7453;
+    margin: 10px;
+    width: 30%;
+
+}
+
+.nbrGarcons{
+    border-radius: 5px;
+    padding: 10px;
+    background-color:#a83b24;
+    margin: 10px;
+    width: 30%;
+}
+
+.donneesGeneralesGraph #partie1{
+    margin-right: 15px;
+    
+}
+.donneesGeneralesGraph{
+    width: 98%;
+    margin-left: 10px;
+}
+
+canvas{
+    padding: 20px;
+    margin: 0 auto; /*centrer le contenu*/
+    width: fit-content;
+}
+
+#partie_bar_nbrEtudAn{
+    width: 40%;
+}
+.carteNbr{
+    font-size: 30px;
+    color: white;
+}
+
+.carteLabel{
+    color: #f1eded;
+}
+
+
+/****************************************SPECIALITES***********************************/
+.spe_MaxMin{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+   
+}
+
+.spe_MaxMin #partie1{
+    margin-right: 15px;
+    width: 400px;
+    
+}
+
+
+#spe_carte1{
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #a74f3e;
+    margin: 10px;
+    margin-bottom: 0;
+    height: 23%;
+}
+
+#spe_carte2{
+    border-radius: 5px;
+    padding: 5px;
+    background-color:#9f7453;
+    margin: 10px;
+    margin-bottom: 0;
+    height: 23%;
+}
+
+#spe_carte3{
+    border-radius: 5px;
+    padding: 5px;
+    background-color:#424b35;
+    margin: 10px;
+    margin-bottom: 0;
+    height: 23%;
+   
+}
+
+.spe1_carteNbr{
+    font-size: 25px;
+    color: white;
+}
+
+.spe1_carteLabel{
+    color: #f1eded;
+}
+
+
+.spe_search{
+    display: flex;
+    justify-content: center;
+}
+
+.spe_search_btn button{
+    width: 100%;
+    font-size: 20px;
+    padding: 6px;
+    color: #f1eded;
+    border-width: 0;
+    border-radius: 5px;
+    margin-top: 2px;
+    background-color:#626a57;
+    
+}
+
+.spe_search_btn button:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.spe_search_btn button:focus{
+    background-color:#424b35;
+}
+
+
+
+.spe_search_btn{
+    margin-top: 12%;
+    width: 25%;
+    
+}
+
+
+#spe_carteNbrEtud{
+    margin-top: 12%;
+    width: 25%;
+    height: fit-content;
+
+    border-radius: 5px;
+    background-color:#424b35;
+    text-align: center;
+}
+.spe_carteNbrEtud_Nbr{
+    font-size: 25px;
+    color: white;
+}
+
+.spe_carteNbrEtud_Label{
+    color: #f1eded;
+}
+
+#general_line_moyAnSpe{
+    height:400px; 
+    width:850px;
+}
+
+
+/*##################################################################### RESPONSIVE ##################################################################################*/
+/* rendre le rendu responsive (cohérent lorsque la taille de l'ecran diminue) */
+@media screen and (max-width: 768px) {
+
+    .gridContainer {
+        grid-template-columns:150px 1fr;
+        
+    }
+
+    .main {
+        grid-template-rows:1fr 1120px 500px;
+    }
+
+    .main_Spe {
+        grid-template-rows: 880px 1fr;  
+    }
+
+    .donneesGeneralesNbr, .donneesGeneralesGraph,  .spe_MaxMin, .spe_search{
+        display: block;
+    }
+
+    .donneesGeneralesNbr{
+        padding-right: 10px;
+    }
+
+    #partie_bar_nbrEtudAn, .nbrGarcons, .nbrFilles,.nbrTotal, .spe_MaxMin #partie1, .spe_search_btn, .spe_pie_nbrEtud, #spe_carteNbrEtud{
+        width: 95%;
+    }
+
+    #spe_carteNbrEtud{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin: 7px;
+    }
+
+    #general_line_moyAnSpe{
+        width: 450px;
+        height: 300px;
+
+    }
+    
+
+
+}
+
+
+
+
+
+
+
+

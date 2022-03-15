@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="{{url_for('static', filename='CSS-dashboard-SAID.css')}}"/>	
+        <script src="https://kit.fontawesome.com/c788365bc3.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+       
+
+    </head>
+    <body>
+        
+        <div class="gridContainer">
+            <header class="header">
+                <button id="actualiser" onclick="actualiserDonnees()">Actualiser</button> 
+            </header>
+
+
+            <aside class="sidenav">	
+                <div >
+                    <img id="PRAVANlogo" src="{{url_for('static', filename='images/PRAVANlogo.png')}}">
+                </div>
+                <div id="menu">
+
+                    <div  style="background-color: #590202;"><a id="spe" href="dashboard-SAID" >Général</a></div>
+
+                    <div><a id="spe" href="dashboard-SPECIALITE_1-SAID" >SPECIALITE_1</a></div>
+                    <div><a id="spe" href="dashboard-SPECIALITE_2-SAID" >SPECIALITE_2</a></div>
+                    <div><a id="spe" href="dashboard-SPECIALITE_3-SAID" >SPECIALITE_3</a></div>
+                    <div><a id="spe" href="dashboard-SPECIALITE_4-SAID" >SPECIALITE_4</a></div>
+                    <div><a id="spe" href="dashboard-SPECIALITE_5-SAID" >SPECIALITE_5</a></div>
+                    <div><a id="spe" href="dashboard-SPECIALITE_6-SAID" >SPECIALITE_6</a></div>
+                    <div><a id="spe" href="dashboard-SPECIALITE_7-SAID" >SPECIALITE_7</a></div>
+                    
+                </div>	
+                
+            </aside>
+
+
+            <main class="main">
+                <!--------------------------------------------------Données générales sur les étudiants de l'université----------------------------------------------------------->
+                <!--***************Nombres**************-->
+                <div class="donneesGeneralesGraph">
+
+                    <div id="partie1" class="partie">
+                        <p>Données générales</p>
+                        <hr>
+    
+                        <div class="donneesGeneralesNbr">
+                            
+                            <div class="nbrTotal" id="carte1">
+                                <p class="carteNbr"></p>
+						        <p class="carteLabel"></p>
+                            </div>
+    
+                            <div class="nbrFilles" id="carte2"> 
+                                <p class="carteNbr"></p>
+						        <p class="carteLabel"></p>
+                            </div>
+    
+                            <div class="nbrGarcons" id="carte3">
+                                <p class="carteNbr"></p>
+						        <p class="carteLabel"></p>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+
+                    <div class="partie" id="partie_bar_nbrEtudAn" >
+                        <p>Nombre d'étudiants de l'université par an</p>
+                        <hr>
+                        <canvas id="Bar_nbrEtudAn" height="200px" width="300px" style="padding-top: 10px;"></canvas>
+                    </div>
+
+                </div>
+
+
+                
+
+
+                <!--***************Graphiques**************-->
+                <div class="donneesGeneralesGraph">
+
+                    <div id="partie1" class="partie">
+                        <p>Demande des spécialités selon le genre des étudiants</p>
+                        <hr>
+                        <canvas id="general_radar" height="400px" width="400px"></canvas>
+                        
+                    </div >
+
+
+
+                    <div class="partie">
+                        <p>Evolution du nombre d'étudiants par an dans chaque spécialité</p>
+                        <hr>
+                        <canvas id="general_line_nbrEtudSpe" height="400px" width="400px"></canvas>
+                    </div>
+
+                </div>
+
+
+                <!----------------------------------------------Données sur les étudiants de l'université selon l'année--------------------------------------------------------------->
+                <div  class="partie" >
+                    <p>Evolution de la moyenne générale de chaque promotion par spécialité</p>
+                    <hr>
+                    <canvas id="general_line_moyAnSpe"></canvas>
+                    
+                </div>
+
+
+            </main>
+
+            
+
+
+
+            <footer class="footer"></footer>
+          </div>
+
+        
+
+          <script src="{{url_for('static', filename='script_general.js')}}"></script> 
+    </body>
+</html> 

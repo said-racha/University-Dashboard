@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="{{url_for('static', filename='CSS-dashboard-SAID.css')}}"/>	
+        <script src="https://kit.fontawesome.com/c788365bc3.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        
+    </head>
+    <body>
+        
+        <div class="gridContainer">
+            <header class="header">
+                <button id="actualiser" onclick="actualiserDonnees_spe5()">Actualiser</button> 
+            </header>
+
+
+            <aside class="sidenav">	
+                <div >
+                    <img id="PRAVANlogo" src="{{url_for('static', filename='images/PRAVANlogo.png')}}">
+                </div>
+                <div id="menu">
+                    <div><a id="spe" href="dashboard-SAID" >Général</a></div>
+
+                    <div ><a id="spe" href="dashboard-SPECIALITE_1-SAID" >SPECIALITE_1</a></div>
+                    <div><a id="spe" href="dashboard-SPECIALITE_2-SAID" >SPECIALITE_2</a></div>
+                    <div ><a id="spe" href="dashboard-SPECIALITE_3-SAID" >SPECIALITE_3</a></div>
+                    <div ><a id="spe" href="dashboard-SPECIALITE_4-SAID" >SPECIALITE_4</a></div>
+                    <div style="background-color: #590202;"><a id="spe" href="dashboard-SPECIALITE_5-SAID" >SPECIALITE_5</a></div>
+                    <div><a id="spe" href="dashboard-SPECIALITE_6-SAID" >SPECIALITE_6</a></div>
+                    <div><a id="spe" href="dashboard-SPECIALITE_7-SAID" >SPECIALITE_7</a></div>
+                    
+                </div>	
+                
+            </aside>
+
+
+            <main class="main_Spe">
+               
+
+                <!------------------------------------------------------------------------------------------------------------->
+                <div  class="partie" >
+
+                    <p>Proportion d'étudiants admis et ajournés par an</p>
+                    <hr>
+                    <div class="spe_search">
+
+                        <div class="spe_pie_nbrEtud" id="spe_carteNbrEtud">
+                            <p class="spe_carteNbrEtud_Nbr"></p>
+                            <p class="spe_carteNbrEtud_Label"></p>
+                        </div>
+                        <div>
+                            <canvas id="spe_admis1" height="350" width="350"></canvas>	
+                        </div>
+                        <div class="spe_search_btn" >
+                            <button id="btn_2019" onclick="btn_spe_admis1_2019()" >2019</button> 
+                            <button id="btn_2020" onclick="btn_spe_admis1_2020()">2020</button> 
+                            <button id="btn_2021" onclick="btn_spe_admis1_2021()">2021</button> 
+                        </div>
+
+                    </div>
+    
+                </div>
+
+
+
+                <!------------------------------------------------------------------------------------------------------------->
+                <div class="spe_MaxMin">
+
+                    <div  class="partie" id="partie1">
+
+                        <p>Moyennes générale de chaque promotion</p>
+                        <hr>
+                        <div class="spe_moy2019" id="spe_carte1">
+                            <p class="spe1_carteNbr"></p>
+                            <p class="spe1_carteLabel"></p>
+                        </div>
+
+                        <div class="spe_moy2020" id="spe_carte2"> 
+                            <p class="spe1_carteNbr"></p>
+                            <p class="spe1_carteLabel"></p>
+                        </div>
+
+                        <div class="spe_moy2021" id="spe_carte3">
+                            <p class="spe1_carteNbr"></p>
+                            <p class="spe1_carteLabel"></p>
+                        </div>
+
+                    </div >
+
+
+
+                    <div  class="partie" id="partie_spe_GroupedBar">
+                        <p>Variance entre le maximum et le minimum des moyennes par an</p>
+                        <hr>
+                        <canvas id="spe_GroupedBar" height="350px" width="450px"></canvas>
+                    </div>
+
+
+                </div>
+
+
+            </main>
+
+            
+
+
+
+            <footer class="footer"></footer>
+          </div>
+
+        
+
+          <script src="{{url_for('static', filename='script_specialite5.js')}}"></script> 
+        
+    </body>
+</html> 

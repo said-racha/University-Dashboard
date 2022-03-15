@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bienvenue</title>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="{{url_for('static', filename='CSS-dashboard-SAID.css')}}"/>	
+        <script src="https://kit.fontawesome.com/c788365bc3.js" crossorigin="anonymous"></script>
+
+        <style>
+
+            .page {
+                position: relative;
+                background-color: rgb(87, 87, 87);
+            }
+
+            #presentation{
+                font-family: 'Poppins', sans-serif; 
+                color: white;
+                background-color: rgba(87, 87, 87, 0.07);
+                font-size: 45px;
+                position: absolute;
+                left: 50%;
+                top:37%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                border-radius: 5%;
+                padding: 15px;
+                
+            }
+
+            #elabore {
+                position: absolute;
+                top: 8px;
+                left: 16px;
+                font-family: 'Roboto', sans-serif;
+                color: white;
+                font-size: 20px;
+                margin-top: 0;
+                
+            }
+
+            img { 
+                width: 100%;
+                height: auto;
+                border: 0;
+                padding: 0;
+            }
+
+            i{
+                font-size: 25px; 
+                color: white;
+                margin-left: 10px;
+            }
+
+            /*-------------------RESPONSIVE----------------*/
+            @media screen and (max-width: 768px) {
+                #presentation{
+                    font-size: 30px;
+                    position: absolute;
+                    left: 50%;
+                    top:38%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    border-radius: 5%;
+                    padding: 8px 8px 8px 8px;
+                }
+            }
+            
+        </style>
+
+
+    </head>
+    <body>
+        
+
+        <div class="page">
+            <img src="{{url_for('static', filename='images/PageAcceuilBackground.png')}}">
+
+            <p id="elabore">Elaboré par :  SAID faten Racha</p>
+            
+            <div id="presentation">
+
+                <span >Accéder au tableau </br>de bord</span>  
+                <a href="dashboard-SAID" ><i class="fas fa-arrow-right" ></i></a> <!--cliquer sur la flèche afin d'afficher le tableau de board-->
+            
+            </div>
+
+            <img src="{{url_for('static', filename='images/PageAcceui2.png')}}">
+            
+        </div>
+
+    </body>
+</html> 
